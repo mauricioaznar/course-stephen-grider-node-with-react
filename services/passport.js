@@ -14,12 +14,12 @@ passport.deserializeUser(async (id, done) => {
   done(null, user)
 })
 
-// 110865774611-9amnmdug156iesivb2hc3gtdl69dqk0u.apps.googleusercontent.com
-// PYRfJucfZ36ieoOnkn1yg1U4
+// proxy is true so that googlestrategy trust proxies and enables https (avoid heroku proxy issue)
 passport.use('google', new GoogleStrategy({
     clientID: keys.googleClientID,
     clientSecret: keys.googleClientSecret,
-    callbackURL: '/auth/google/callback'
+    callbackURL: '/auth/google/callback',
+    proxy: true
   }, async (accessToken, refreshToken, profile, done) => {
     const existingUser = await User.findOne({googleId: profile.id})
     if (existingUser) {
