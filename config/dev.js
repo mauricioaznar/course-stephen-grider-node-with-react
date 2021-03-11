@@ -6,5 +6,7 @@ module.exports = {
   mongoURI: 'mongodb+srv://maguas:maguas@emaily-cluster.dro2u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
   cookieKey: 'asdfasdfasdfasdfahsdfhllkjdflkahslkdfhlakshdflkhalkh',
   stripePublishableKey: 'pk_test_51IOCYBI3rZ17NZyMpTArlvyf2K0bloNrBdCSRIvCvVZuOMDwkmMUkytso4vWFI1GcXTGV2INNpsjpPX9oSDnFoNV00vdibcddH',
-  stripeSecretKey: 'sk_test_51IOCYBI3rZ17NZyMDwhlB5lJlcML0vFbmtsRJIYLicDdt7D2uLGxePNmNUWfxztm1BVdyz1abzPtegjYCbVLYOTa005rBjwmw2'
+  stripeSecretKey: 'sk_test_51IOCYBI3rZ17NZyMDwhlB5lJlcML0vFbmtsRJIYLicDdt7D2uLGxePNmNUWfxztm1BVdyz1abzPtegjYCbVLYOTa005rBjwmw2',
+  sendGridApiKey: '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',
+  redirectDomain: 'http://localhost:3000/'
 }
