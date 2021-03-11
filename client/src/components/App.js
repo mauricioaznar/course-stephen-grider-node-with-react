@@ -4,18 +4,9 @@ import Header from "./Header";
 import {connect} from 'react-redux'
 import * as actions from '../actions'
 import Landing from "./Landing";
+import Dashboard from "./Dashboard";
+import SurveyNew from "./surveys/SurveyNew";
 
-const Dashboard = () => {
-  return <h2>
-    Dashboard
-  </h2>
-}
-
-const SurveyNew = () => {
-  return <h2>
-    Survey new
-  </h2>
-}
 
 
 class App extends React.Component {
@@ -25,13 +16,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div>
         <BrowserRouter>
           <div>
             <Header />
-            <Route exact path="/" component={Landing} />
-            <Route exact path="/surveys" component={Dashboard} />
-            <Route path="/surveys/new" component={SurveyNew} />
+            <div className="container">
+              <Route exact path="/" component={Landing} />
+              <Route exact path="/surveys" component={Dashboard} />
+              <Route path="/surveys/new" component={SurveyNew} />
+            </div>
           </div>
         </BrowserRouter>
       </div>
